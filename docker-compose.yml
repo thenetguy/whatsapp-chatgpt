@@ -1,4 +1,4 @@
-https://github.com/thenetguy/whatsapp-chatgptversion: "3"
+version: "3"
 services:
     whatsapp-chatgpt:
         container_name: whatsapp-chatgpt
