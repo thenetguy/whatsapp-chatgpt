@@ -1,9 +1,11 @@
-version: "3"
+https://github.com/thenetguy/whatsapp-chatgptversion: "3"
 services:
     whatsapp-chatgpt:
         container_name: whatsapp-chatgpt
-        read_only: true
-        image: ghcr.io/askrella/whatsapp-chatgpt:master
+        read_only: false
+        build: 
+            context: .
+            dockerfile: Dockerfile
         environment:
             OPENAI_API_KEY: ""
             OPENAI_GPT_MODEL: ""
