@@ -20,7 +20,7 @@ ENV PREFIX_ENABLED ""
 COPY package.json package-lock.json ./
 
 RUN npm install
-RUN npm install vite-node
+RUN npm install vite-node: "^0.31.1"
 
 COPY . .
 
