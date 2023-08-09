@@ -9,7 +9,7 @@ services:
         environment:
             OPENAI_API_KEY: ""
             OPENAI_GPT_MODEL: ""
-            PREFIX_ENABLED: ""
+            PREFIX_ENABLED: "false"
             SERPAPI_API_KEY: ""
         restart: unless-stopped
         volumes:
