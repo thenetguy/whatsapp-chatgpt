@@ -2,17 +2,19 @@ version: "3"
 services:
     whatsapp-chatgpt:
         container_name: whatsapp-chatgpt
+        image: whatsapp-chatgpt-image:1.0
         read_only: false
-        build: 
+        build:
             context: .
             dockerfile: Dockerfile
         environment:
             OPENAI_API_KEY: ""
-            OPENAI_GPT_MODEL: ""
+            OPENAI_GPT_MODEL: "gpt-3.5-turbo"
             PREFIX_ENABLED: "false"
             SERPAPI_API_KEY: ""
+            PROMPT_MODERATION_ENABLED: false
         restart: unless-stopped
         volumes:
-            - session-data:/app/session
+            - /docker/vol/whatsapp-chatgpt/session-data:/app/session
 volumes:
     session-data:
