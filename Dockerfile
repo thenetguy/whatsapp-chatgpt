@@ -11,6 +11,8 @@ RUN apt install -y ffmpeg
 ## Uncomment below command if you want to use the local version of transcription module
 # RUN pip install -y python pip
 # RUN pip install -U openai-whisper
+# Install nano
+RUN apt-get install -y nano
 
 WORKDIR /app/
 
